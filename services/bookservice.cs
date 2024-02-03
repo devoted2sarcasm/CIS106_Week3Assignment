@@ -11,8 +11,8 @@ namespace Books.services {
             newBook.Title = Console.ReadLine();
             Console.WriteLine("Enter the author of the book: ");
             newBook.Author = Console.ReadLine();
-            getGenre(newBook);
-            assignId(newBook);
+            newBook.setGenre(newBook);
+            newBook.assignId(newBook);
             library.Add(newBook);
 
         }
@@ -21,7 +21,7 @@ namespace Books.services {
             foreach (Book book in library) {
                 Console.WriteLine("Title: " + book.Title);
                 Console.WriteLine("Author: " + book.Author);
-                Console.WriteLine("Genre: " + book.Genre);
+                Console.WriteLine("Genre: " + book.BookGenre);
                 Console.WriteLine("ID: " + book.Id);
                 Console.WriteLine("--------------------");
             }
@@ -34,7 +34,7 @@ namespace Books.services {
                 if (book.Id == id) {
                     Console.WriteLine("Title: " + book.Title);
                     Console.WriteLine("Author: " + book.Author);
-                    Console.WriteLine("Genre: " + book.Genre);
+                    Console.WriteLine("Genre: " + book.BookGenre);
                     Console.WriteLine("ID: " + book.Id);
                 }
             }

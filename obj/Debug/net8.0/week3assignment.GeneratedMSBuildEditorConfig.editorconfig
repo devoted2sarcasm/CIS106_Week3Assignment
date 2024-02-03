@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = week3assignment
-build_property.ProjectDir = c:\NCMC\CIS106_NET\week3assignment\week3assignment\
+build_property.ProjectDir = c:\NCMC\CIS106_NET\week3assignment\week3assignment\CIS106_Week3Assignment\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

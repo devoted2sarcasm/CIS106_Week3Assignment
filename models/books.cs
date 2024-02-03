@@ -1,66 +1,94 @@
+using System;
+
 namespace Books.models {
     public class Book {
         public string Title { get; set; }
         public string Author { get; set; }
-        public enum Genre {
-            HOR = "Horror",
-            FIC = "Fiction",
-            NON = "Non-Fiction",
-            SCI = "Science Fiction",
-            FAN = "Fantasy",
-            BIO = "Biography",
-
-        }
+        public Genre BookGenre { get; set; }
         public string Id { get; set; }
 
-        public Book(string title, string author, Genre genre, string id) {
-            Title = title;
-            Author = author;
-            Genre = genre;
-            Id = id;
+        public enum Genre {
+            HOR = 1,
+            FIC = 2,
+            NON = 3,
+            SCI = 4,
+            FAN = 5,
+            BIO = 6,
+
         }
-        public string getGenre(Book newBook) {
+
+        public Book() {
+            this.Title = "Unknown";
+            this.Author = "Unknown";
+            this.BookGenre = Genre.NON;
+            this.Id = "0";
+        }
+        public Book(string title, string author, Genre genre, string id) {
+            this.Title = title;
+            this.Author = author;
+            this.BookGenre = genre;
+            this.Id = id;
+        }
+        public void setGenre(Book newBook) {
             Console.WriteLine("Enter the genre of the book: \n" +
                 "1. Horror\n" +
                 "2. Fiction\n" +
                 "3. Non-Fiction\n" +
                 "4. Science Fiction\n" +
                 "5. Fantasy\n" +
-                "6. Biography\n" +
-                "Enter the number of the genre: ");
-            newBook.Genre = Console.ReadLine();
+                "6. Biography\n");
+            string choice = Console.ReadLine();
             do {
-                switch (newBook.Genre) {
+                switch (choice) {
                     case "1":
-                        newBook.Genre = Genre.HOR;
+                        newBook.BookGenre = Genre.HOR;
                         break;
                     case "2":
-                        newBook.Genre = Genre.FIC;
+                        newBook.BookGenre = Genre.FIC;
                         break;
                     case "3":
-                        newBook.Genre = Genre.NON;
+                        newBook.BookGenre = Genre.NON;
                         break;
                     case "4":
-                        newBook.Genre = Genre.SCI;
+                        newBook.BookGenre = Genre.SCI;
                         break;
                     case "5":
-                        newBook.Genre = Genre.FAN;
+                        newBook.BookGenre = Genre.FAN;
                         break;
                     case "6":
-                        newBook.Genre = Genre.BIO;
+                        newBook.BookGenre = Genre.BIO;
                         break;
                     default:
                         Console.WriteLine("Invalid input. Please enter a number between 1 and 6: ");
-                        newBook.Genre = Console.ReadLine();
-                        break;
+                        continue;
                 }
-            } while (newBook.Genre != Genre.HOR || newBook.Genre != Genre.FIC || newBook.Genre != Genre.NON || newBook.Genre != Genre.SCI || newBook.Genre != Genre.FAN || newBook.Genre != Genre.BIO);
+                break;
+            } while (true);
+        } 
+
+
+        public void assignId(Book newBook) {
+            do {
+                Console.WriteLine("Enter the ID of the book: ");
+                string input = Console.ReadLine();
+
+                if (IsValidId(input))
+                {
+                    newBook.Id = input;
+                    break; // Exit the loop if the input is valid
+                }
+                else
+                {
+                    Console.WriteLine("Invalid input. Please enter a non-empty ID.");
+                }
+            } while (true);
         }
 
-        public string assignId(Book newBook) {
-            Console.WriteLine("Enter the ID of the book: ");
-            newBook.Id = Console.ReadLine();
+        private bool IsValidId(string input) {
+            // You can add more validation rules as needed
+            return !string.IsNullOrWhiteSpace(input);
         }
+
     }
 
 }
