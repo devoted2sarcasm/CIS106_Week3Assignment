@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\NCMC\\CIS106_NET\\week3assignment\\week3assignment\\CIS106_Week3Assignment\\week3assignment.csproj": {}
+    "C:\\NCMC\\CIS106_NET\\week3assignment\\week3assignment\\CIS106_Week3Assignment\\week3assignment.csproj": {}
   },
   "projects": {
-    "c:\\NCMC\\CIS106_NET\\week3assignment\\week3assignment\\CIS106_Week3Assignment\\week3assignment.csproj": {
+    "C:\\NCMC\\CIS106_NET\\week3assignment\\week3assignment\\CIS106_Week3Assignment\\week3assignment.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\NCMC\\CIS106_NET\\week3assignment\\week3assignment\\CIS106_Week3Assignment\\week3assignment.csproj",
+        "projectUniqueName": "C:\\NCMC\\CIS106_NET\\week3assignment\\week3assignment\\CIS106_Week3Assignment\\week3assignment.csproj",
         "projectName": "week3assignment",
-        "projectPath": "c:\\NCMC\\CIS106_NET\\week3assignment\\week3assignment\\CIS106_Week3Assignment\\week3assignment.csproj",
+        "projectPath": "C:\\NCMC\\CIS106_NET\\week3assignment\\week3assignment\\CIS106_Week3Assignment\\week3assignment.csproj",
         "packagesPath": "C:\\Users\\greaz\\.nuget\\packages\\",
-        "outputPath": "c:\\NCMC\\CIS106_NET\\week3assignment\\week3assignment\\CIS106_Week3Assignment\\obj\\",
+        "outputPath": "C:\\NCMC\\CIS106_NET\\week3assignment\\week3assignment\\CIS106_Week3Assignment\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\greaz\\AppData\\Roaming\\NuGet\\NuGet.Config"
